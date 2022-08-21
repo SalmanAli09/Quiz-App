@@ -21,8 +21,6 @@ function getData() {
 function login() {
 	var userNameLogin = document.getElementById("input_userName_si").value;
 	var userPassLogin = document.getElementById("input_userPass_si").value;
-	document.getElementById("footer").style.color = "white"
-	document.getElementById("footer").style.backgroundColor = "#274EA7"
 	var storage = JSON.parse(localStorage.getItem("objSignUp"));
 	if (userNameLogin === storage.name) {
 		if (userPassLogin === storage.password) {
@@ -32,6 +30,8 @@ function login() {
 			document.getElementById("panel_window").style.display = "flex"
 			document.getElementById("panel_window_nav").style.display = "block"
 			document.getElementById("panel_window_nav").innerHTML = "Hello, " + userNameLogin;
+			document.getElementById("footer").style.color = "white"
+			document.getElementById("footer").style.backgroundColor = "#274EA7"
 			// document.getElementById("logout").style.display = "block"
 
 		} else {
@@ -196,27 +196,27 @@ function next() {
 		document.getElementById("scoreHere").innerHTML = percentage + "%"
 		console.log("Your Total Score is = " + score + " And Your Percentage is " + (score / 4) * 100 + "%")
 	} if (percentage >= 90) {
-		grade.innerHTML = "<center>" + "Congartulations!🎉" + "<hr>" + "</center>" + "You Got A" + "<sup>" + "+" + "</sup>"
+		grade.innerHTML = "<center>" + "Congartulations!🎉" + "<hr>" + "</center>" + "Your Grade : A" + "<sup>" + "+" + "</sup>"
 		document.getElementById("Score").style.borderColor = "#274EA7"
-		rightAns.innerHTML = "Correct Answers :" + score;
-		totalQues.innerHTML = "Total Questions :" + qCount;
+		rightAns.innerHTML = "Correct Answers : " + score;
+		totalQues.innerHTML = "Total Questions : " + qCount;
 	} if (percentage <= 80) {
-		grade.innerHTML = "<center>" + "Congartulations!🎉" + "<hr>" + "</center>" + "You Got A";
+		grade.innerHTML = "<center>" + "Congartulations!🎉" + "<hr>" + "</center>" + "Your Grade : A ";
 		document.getElementById("Score").style.borderColor = "green"
-		rightAns.innerHTML = "Correct Answers :" + score;
-		totalQues.innerHTML = "Total Questions :" + qCount;
+		rightAns.innerHTML = "Correct Answers : " + score;
+		totalQues.innerHTML = "Total Questions : " + qCount;
 	} if (percentage <= 70) {
-		grade.innerHTML = "<center>" + "Work Hard!" + "<hr>" + "</center>" + "You Got B";
+		grade.innerHTML = "<center>" + "Work Hard!" + "<hr>" + "</center>" + "Your Grade : B";
 		document.getElementById("Score").style.borderColor = "green"
-		rightAns.innerHTML = "Correct Answers :" + score;
-		totalQues.innerHTML = "Total Questions :" + qCount;
+		rightAns.innerHTML = "Correct Answers : " + score;
+		totalQues.innerHTML = "Total Questions : " + qCount;
 	} if (percentage <= 60) {
 		document.getElementById("certificateBtn").style.display = "block"
 		document.getElementById("certificateBtn").style.display = "none"
-		grade.innerHTML = "<center>" + "Be Consistent" + "<hr>" + "</center>" + "You Failed";
+		grade.innerHTML = "<center>" + "Be Consistent" + "<hr>" + "</center>" + "Your Grade : Fail";
 		document.getElementById("Score").style.borderColor = "red"
-		rightAns.innerHTML = "Correct Answers :" + score;
-		totalQues.innerHTML = "Total Questions :" + qCount;
+		rightAns.innerHTML = "Correct Answers : " + score;
+		totalQues.innerHTML = "Total Questions : " + qCount;
 	}
 }
 function getAnswer() {
@@ -246,7 +246,6 @@ function certificate() {
 	var userNameLogin = document.getElementById("input_userName_si").value;
 	document.getElementById("namecertificateId").innerHTML = userNameLogin.toUpperCase()
 	document.getElementById("date").innerHTML = "<u>" + date + "</u>" + "<br>" + "<center>" + "Date" + "</center>"
-	document.getElementById("sign").innerHTML = "<u>" + "Salman" + "</u>" + "<br>" + "<center>" + "Sign" + "</center>"
 }
 
 

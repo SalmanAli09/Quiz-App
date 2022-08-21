@@ -426,17 +426,21 @@
 }
 
 #namecertificateId {
-    width: 200px;
+    width: max-content;
     margin: 0px auto;
     text-align: center;
     font-size: 55px;
-    initial-letter: 5;
+    /* initial-letter: 5; */
     font-weight: bolder;
     border-bottom: 1px solid black;
+    padding: 15px;
 }
 
 #data_sign {
     display: flex;
     justify-content: space-around;
     font-size: 27px;
+}
+#signName{
+    font-family: 'Pacifico', cursive !important;
 }
